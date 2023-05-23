@@ -1,5 +1,7 @@
 import React from "react";
 import "./Navbar.css";
+// import routes
+import { Routes, Route } from "react-router-dom";
 
 export default function Navbar() {
   return (
@@ -29,7 +31,11 @@ export default function Navbar() {
     // </nav>
     <nav>
       <a href="#">Home</a>
-      <a href="#">Houses</a>
+        {/* Routing */}
+      <Routes>
+        {/* Routing to Houses.jsx */}
+      <Route NavLink to="/houses" element={<Houses></Houses>}>Houses</Route>
+      </Routes>
       <a href="#">Spells</a>
       <a href="#">Potions</a>
       <div id="indicator"></div>
