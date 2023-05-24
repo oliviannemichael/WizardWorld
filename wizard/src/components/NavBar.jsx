@@ -1,9 +1,6 @@
 import React from "react";
 import "./Navbar.css";
-// import routes
-import { Routes, Route } from "react-router-dom";
-// import house.jsx component
-import Houses from "./Houses";
+
 
 export default function Navbar() {
   return (
@@ -33,11 +30,7 @@ export default function Navbar() {
     // </nav>
     <nav>
       <a href="#">Home</a>
-        {/* Routing */}
-      <Routes>
-        {/* Routing to Houses.jsx */}
-      <Route path="/houses" element={<Houses />} href="#">Houses</Route>
-      </Routes>
+      <a href="#">Houses</a>
       <a href="#">Spells</a>
       <a href="#">Potions</a>
       <div id="indicator"></div>

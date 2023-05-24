@@ -4,6 +4,11 @@ import Navbar from "./components/NavBar";
 import Houses from "./components/Houses";
 import hogwards from "./hogwards.js";
 import Popup from "./components/Popup";
+// import route and routes
+import { Route, Routes } from "react-router-dom";
+// import link
+import { Link } from "react-router-dom";
+import Spells from "./components/Spells";
 // import EndLine from "./components/EndLine";
 
 
@@ -45,6 +50,21 @@ export default function App() {
             </div>
           </div>
           <Navbar />
+
+{/* routes and links to house.jsx */}
+<nav>
+  <Link to="/houses"></Link>
+</nav>
+
+<nav>
+  <Link to="/spells"></Link>
+</nav>
+
+<Routes>
+  <Route path="/houses" element={<Houses />} />
+  <Route path="/spells" element={<Spells />} />
+</Routes>
+
         </header>
         {/* <!-- testing --> */}
 
@@ -94,6 +114,7 @@ export default function App() {
         <br />
         <br />
         <Houses />
+      
         {/* //I want a button that will randomly assign a house to the user when
         they click on the button and the result appears below the button in a
         card according to the house they belong from the function Houses above
