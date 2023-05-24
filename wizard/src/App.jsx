@@ -6,6 +6,7 @@ import hogwards from "./hogwards.js";
 import Popup from "./components/Popup";
 // import EndLine from "./components/EndLine";
 
+
 export default function App() {
   let [buttonPopup, setButtonPopup] = useState(false);
 

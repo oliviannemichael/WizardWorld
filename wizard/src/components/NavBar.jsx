@@ -2,6 +2,8 @@ import React from "react";
 import "./Navbar.css";
 // import routes
 import { Routes, Route } from "react-router-dom";
+// import house.jsx component
+import Houses from "./Houses";
 
 export default function Navbar() {
   return (
@@ -34,7 +36,7 @@ export default function Navbar() {
         {/* Routing */}
       <Routes>
         {/* Routing to Houses.jsx */}
-      <Route NavLink to="/houses" element={<Houses></Houses>}>Houses</Route>
+      <Route path="/houses" element={<Houses />} href="#">Houses</Route>
       </Routes>
       <a href="#">Spells</a>
       <a href="#">Potions</a>
