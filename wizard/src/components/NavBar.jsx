@@ -1,5 +1,10 @@
 import React from "react";
 import "./Navbar.css";
+import "./Houses.jsx";
+import "./Spells.jsx";
+import "./Potions.jsx";
+import { Link } from "react-router-dom";
+
 
 
 export default function Navbar() {
@@ -30,9 +35,12 @@ export default function Navbar() {
     // </nav>
     <nav>
       <a href="#">Home</a>
-      <a href="#">Houses</a>
-      <a href="#">Spells</a>
-      <a href="#">Potions</a>
+       {/* links to house.jsx */}
+      <Link to="/houses">Houses</Link>
+        {/* links to spells.jsx */}
+      <Link to="/spells">Spells</Link>
+       {/* links to potions.jsx  */}
+      <Link to="/potions">Potions</Link>
       <div id="indicator"></div>
     </nav>
   );

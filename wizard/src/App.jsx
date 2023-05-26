@@ -8,9 +8,11 @@ import Popup from "./components/Popup";
 import { Route, Routes } from "react-router-dom";
 // import link
 import { Link } from "react-router-dom";
+// import spells
 import Spells from "./components/Spells";
+// import potions
+import Potions from "./components/Potions";
 // import EndLine from "./components/EndLine";
-
 
 export default function App() {
   let [buttonPopup, setButtonPopup] = useState(false);
@@ -50,22 +52,8 @@ export default function App() {
             </div>
           </div>
           <Navbar />
-
-{/* routes and links to house.jsx */}
-<nav>
-  <Link to="/houses"></Link>
-</nav>
-
-<nav>
-  <Link to="/spells"></Link>
-</nav>
-
-<Routes>
-  <Route path="/houses" element={<Houses />} />
-  <Route path="/spells" element={<Spells />} />
-</Routes>
-
         </header>
+
         {/* <!-- testing --> */}
 
         <br />
@@ -107,14 +95,22 @@ export default function App() {
             So come along and explore the wonders of Wizard World! You never
             know what amazing discoveries and adventures lie ahead.
           </p>
+
+          {/* routes to app.jsx, house.jsx and spells.jsx */}
+          <Routes>
+            <Route path="/" element={<App />} />
+            <Route path="/houses" element={<Houses />} />
+            <Route path="/spells" element={<Spells />} />
+            <Route path="/potions" element={<Potions />} />
+          </Routes>
+          
           <br />
           <br />
         </div>
         <br />
         <br />
         <br />
-        <Houses />
-      
+
         {/* //I want a button that will randomly assign a house to the user when
         they click on the button and the result appears below the button in a
         card according to the house they belong from the function Houses above
