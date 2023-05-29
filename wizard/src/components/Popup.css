@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap");
+
 .popup {
   position: fixed;
   top: 0;
@@ -30,13 +32,14 @@
 }
 
 /* testing */
-@import url("https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap");
 
 .popup_inner.close {
   /* position: absolute; I want the position of the button to be on the center  */
   position: absolute;
   top: 20px;
   right: 20px;
+
+}
 
   button {
     background: none;
@@ -93,7 +96,7 @@
     height: 50px;
     transform: rotate(0deg);
   }
-}
+
 
 /* testing */
 body {

@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
-import Navbar from "./components/NavBar";
+
+
 import Houses from "./components/Houses";
-import hogwards from "./hogwards.js";
-import Popup from "./components/Popup";
+import Navbar from "./components/NavBar";
 // import route and routes
 import { Route, Routes } from "react-router-dom";
 // import link
@@ -12,25 +12,11 @@ import { Link } from "react-router-dom";
 import Spells from "./components/Spells";
 // import potions
 import Potions from "./components/Potions";
+// import sortinghat
+import SortingHat from "./components/SortingHat";
 // import EndLine from "./components/EndLine";
 
 export default function App() {
-  let [buttonPopup, setButtonPopup] = useState(false);
-
-  let [houseName, setHouseName] = useState("");
-
-  //filter the hogward and for every item should match the house name and save it.
-  //To show it on ie a card/featured create the card and use the filteredArray[0] to show the info
-  let filteredArray = hogwards.filter((i) => i.name === houseName);
-  console.log(filteredArray);
-
-  // I need a function called sorting hat that will randomly assign a house to the user when they click on the button
-  function sortingHat() {
-    let houses = ["Gryffindor", "Slytherin", "Hufflepuff", "Ravenclaw"];
-    let randomHouse = houses[Math.floor(Math.random() * houses.length)];
-    return randomHouse;
-  }
-
   // I want to insert four images of the four houses here
   //when I click on the image, I want to display the house name, and description of the house
   //I want to display the house name and description in a card and there should be a buttton to click to take you to the page Houses.jsx
@@ -55,9 +41,6 @@ export default function App() {
         </header>
 
         {/* <!-- testing --> */}
-
-        <br />
-        <br />
 
         <div className="paragraph">
           <p>
@@ -96,99 +79,16 @@ export default function App() {
             know what amazing discoveries and adventures lie ahead.
           </p>
 
-          {/* routes to app.jsx, house.jsx and spells.jsx */}
+          {/* routes to app.jsx, house.jsx, spells.jsx and sortinghat.jsx */}
           <Routes>
             <Route path="/" element={<App />} />
             <Route path="/houses" element={<Houses />} />
             <Route path="/spells" element={<Spells />} />
             <Route path="/potions" element={<Potions />} />
+            <Route path="/sortinghat" element={<SortingHat />} />
           </Routes>
-          
-          <br />
-          <br />
         </div>
-        <br />
-        <br />
-        <br />
 
-        {/* //I want a button that will randomly assign a house to the user when
-        they click on the button and the result appears below the button in a
-        card according to the house they belong from the function Houses above
-        // */}
-        <br />
-        <br />
-        <br />
-        {/* testing */}
-        <section className="sorting-hat">
-          <h1>Hogwards sorting hat</h1>
-          <img
-            id="hat"
-            src="https://cdn2.hubspot.net/hubfs/678613/Projects/CodePen/Harry%20Potter%20Sorting%20Hat/Sorting%20Hat.png"
-            alt="Sorting Hat"
-          ></img>
-          <p id="message"></p>
-          <button
-            class="button-85"
-            role="button"
-            onClick={() => {
-              setHouseName(sortingHat());
-              setButtonPopup(true);
-            }}
-            id="sortbutton"
-          >
-            Click to Get Sorted Into Your House
-          </button>
-          <p id="message"></p>
-        </section>
-
-        {/* testing */}
-
-        <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
-          {houseName}
-          {/* In addition to the house name, I want to display the house description */}
-          {/* but first I need to save it to a variable otherwise it reads undefined */}
-          <br />
-          <br />
-          <div className="title"> House:</div>{" "}
-          {filteredArray[0] && filteredArray[0].name} <br />
-          <div className="subtitle"> Description:</div>{" "}
-          {filteredArray[0] && filteredArray[0].description}
-          <br />
-          <div className="column-container">
-            <div className="column">
-              <div className="subtitle">Founder: </div>
-              {filteredArray[0] && filteredArray[0].founder}
-              <br />
-              <div className="subtitle">Common Room:</div>{" "}
-              {filteredArray[0] && filteredArray[0].commonRoom}
-              <br />
-              <div className="subtitle">Password: </div>
-              {filteredArray[0] && filteredArray[0].password}
-              <br />
-              <div className="subtitle">Mascot:</div>{" "}
-              {filteredArray[0] && filteredArray[0].mascot}
-              <br />
-            </div>
-            <div className="column">
-              <div className="subtitle">Head of House:</div>{" "}
-              {filteredArray[0] && filteredArray[0].headOfHouse}
-              <br />
-              <div className="subtitle">Ghost:</div>{" "}
-              {filteredArray[0] && filteredArray[0].houseGhost}
-              <br />
-              <div className="subtitle">Colors:</div>{" "}
-              {filteredArray[0] && filteredArray[0].colors}
-              <br />
-              <div className="subtitle">Element:</div>{" "}
-              {filteredArray[0] && filteredArray[0].element}
-              <br />
-              <div className="subtitle">Traits:</div>{" "}
-              {filteredArray[0] && filteredArray[0].traits}
-            </div>
-          </div>
-        </Popup>
-
-        {/* <EndLine /> */}
       </main>
     </div>
   );

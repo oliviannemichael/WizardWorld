@@ -3,6 +3,7 @@ import "./Navbar.css";
 import "./Houses.jsx";
 import "./Spells.jsx";
 import "./Potions.jsx";
+import "./SortingHat.jsx";
 import { Link } from "react-router-dom";
 
 
@@ -41,6 +42,8 @@ export default function Navbar() {
       <Link to="/spells">Spells</Link>
        {/* links to potions.jsx  */}
       <Link to="/potions">Potions</Link>
+      {/* links to sortinghat.jsx */}
+      <Link to="/sortinghat">Sorting Hat</Link>
       <div id="indicator"></div>
     </nav>
   );
