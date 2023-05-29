@@ -89,6 +89,58 @@ export default function Potions() {
           </p>
         </div>
       </div>
+      <div className="card">
+        <img
+          className="HouseImage"
+          src="https://static.wikia.nocookie.net/harrypotter/images/a/ae/Mandrake_Restorative_Draught_HM.jpg"
+        />
+        <div className="card-body">
+          <h5 className="card-title">Mandrake Restorative Draught</h5>
+          <p className="card-text">
+            <p>Effect: Returns transfigured or cursed individuals to their original state.</p>
+            <p>Ingredients: Stewed Mandrake</p>
+          </p>
+        </div>
+      </div>
+      <div className="card">
+        <img
+          className="HouseImage"
+          src="https://static.wikia.nocookie.net/harrypotter/images/1/1b/B2C12M2_Polyjuice_Potion_ready.jpg"
+        />
+        <div className="card-body">
+          <h5 className="card-title">Polyjuice Potion</h5>
+          <p className="card-text">
+            <p>Effect: Allows a human drinker to temporarily assume the form of another person.</p>
+            <p>Ingredients: Lacewing flies (stewed for 21 days), Leeches, Powdered bicorn horn, Knotgrass, Fluxweed (picked at full moon), Shredded boomslang skin, A bit of the person one wants to turn into (typically hair)</p>
+          </p>
+        </div>
+      </div>
+      <div className="card">
+        <img
+          className="HouseImage"
+          src="https://static.wikia.nocookie.net/harrypotter/images/2/2b/Sleeping_Draught.png"
+        />
+        <div className="card-body">
+          <h5 className="card-title">Sleeping Draught</h5>
+          <p className="card-text">
+            <p>Effect: Make the drinker quickly fall into a deep but temporary sleep.</p>
+            <p>Ingredients: 4 sprigs of Lavender, 6 measures of Standard Ingredient, 2 blobs of Flobberworm Mucus, 4 Valerian sprigs, Wormwood, Powdered Asphodel petals, Flobberworm Mucus, Sopophorous bean, Valerian sprigs, Nettle essence</p>
+          </p>
+        </div>
+      </div>
+      <div className="card">
+        <img
+          className="HouseImage"
+          src="https://static.wikia.nocookie.net/harrypotter/images/0/01/PA_C8.jpg"
+        />
+        <div className="card-body">
+          <h5 className="card-title">Wolfsbane Potion</h5>
+          <p className="card-text">
+            <p>Effect: Make the drinker quickly fall into a deep but temporary sleep.</p>
+            <p>Ingredients: Allowed werewolves to keep their minds post-transformation</p>
+          </p>
+        </div>
+      </div>
     </div>
   );
 }
