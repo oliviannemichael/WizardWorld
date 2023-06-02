@@ -8,7 +8,7 @@
   height: 100%;
   background: #8a2387;
   background: linear-gradient(to right, #f27121, #e94057, #8a2387);
-  position: relative;
+  /* position: relative; */
   text-align: left;
   opacity: 1;
   display: flex;

@@ -2,6 +2,7 @@ import "./SortingHat.css";
 import React, { useState } from "react";
 import Popup from "./Popup";
 import hogwards from "../hogwards.js";
+import EndLine from "./EndLine";
 
 export default function SortingHat() {
   let [buttonPopup, setButtonPopup] = useState(false);
@@ -32,24 +33,28 @@ export default function SortingHat() {
   } return (
     <div>
   <section className="sorting-hat">
-    <h1>Hogwards sorting hat</h1>
+    <h1>Hogwarts sorting hat</h1>
     <img
       id="hat"
       src="https://cdn2.hubspot.net/hubfs/678613/Projects/CodePen/Harry%20Potter%20Sorting%20Hat/Sorting%20Hat.png"
       alt="Sorting Hat"
     ></img>
     <p id="message"></p>
+    <div className="buttonContainer">
     <button
-      class="button-85"
+      className="button-85"
       role="button"
       onClick={() => {
         setHouseName(sortingHat());
         setButtonPopup(true);
       }}
       id="sortbutton"
+      
     >
+
       Click to Get Sorted Into Your House
     </button>
+    </div>
     <p id="message"></p>
   </section>;
 

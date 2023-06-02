@@ -81,7 +81,7 @@ export default function App() {
 
           {/* routes to app.jsx, house.jsx, spells.jsx and sortinghat.jsx */}
           <Routes>
-            <Route path="/" element={<App />} />
+            {/* <Route path="/" element={<App />} /> */}
             <Route path="/houses" element={<Houses />} />
             <Route path="/spells" element={<Spells />} />
             <Route path="/potions" element={<Potions />} />
